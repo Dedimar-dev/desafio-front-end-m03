@@ -1,0 +1,153 @@
+.table{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    
+    width: 1000px;
+    margin-left: 100px;
+    gap: 50px;
+}
+
+.table-head {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    width: 1000px;
+    height: 58px;
+
+    padding-left: 30px;
+
+    gap: 120px;
+}
+
+.column-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    position: relative;
+
+    gap: 50px;
+    
+}
+
+.table-line {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+    width: 1000px;
+    height: 10px;
+
+    padding-left: 30px;
+
+    box-shadow: 0 2px #EAEAEA;
+
+    gap: 98px;
+}
+
+.line-items {
+   width: 110px;
+   margin-bottom: 40px;
+}
+
+.edit-icon{
+    /* margin-bottom: 20px; */
+}
+
+
+.delete-icon{
+    margin-left: 30px;
+}
+
+.container-confirm-delete {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column;
+
+   
+    position: absolute;
+    left: -5px;
+    top: 0;
+
+    z-index: 1;
+
+    font-size: 14px;
+
+    Width: 100px;
+    Height: 55px;
+
+    border-radius: 5px;
+
+    background-color: #95c6eb;
+
+    gap: 5px;
+}
+
+.div-confirm-delete {
+    position: absolute;
+    right: 0;
+}
+
+.seta {
+    position: relative;
+    left: -30px;
+    top: 18px;
+}
+
+.div-buttons {
+    display: flex;
+
+    position: relative;
+    bottom: 12px;
+    gap: 10px;
+}
+
+.btn-actions-confirm-delete{
+    all: unset;
+
+    box-sizing: border-box;
+    width: 30px;
+    height: 16px;
+
+    text-align: center;
+    font-size: 14px;
+
+    border-radius: 5px;
+}
+
+
+
+.sim {
+    background-color: #3A9FF1;
+}
+
+.nao {
+    background-color: #FF576B;
+}
+
+.entrada {
+   color: #7B61FF;
+}
+
+.saida {
+   color: #FA8C10;
+}
+
+.none {
+    display: none;
+}

@@ -1,0 +1,55 @@
+.container-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+
+    width: 236px;
+    height: 220px;
+
+    padding-left: 15px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    position:absolute;
+    top: 270px;
+    right: 60px;
+    
+
+    gap: 20px;
+   
+}
+.titulo-resumo {
+    margin-left: 30px;
+}
+
+.linha {
+    background-color: #EAEAEA;
+    width: 215px;
+    height: 2px;
+}
+
+.in{
+    color: #645FFB;
+}
+
+.out {
+    color:#FA8C10;
+}
+
+.balance {
+  color: #3A9FF1;
+}
+
+.div {
+    display: flex;
+    justify-content: space-around;
+
+    width: 90%;
+}
+
+.top-resumo {
+    top: 190px;
+}

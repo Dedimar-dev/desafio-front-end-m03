@@ -1,0 +1,161 @@
+
+.container-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1020px;
+    height: 220px;
+
+    position: relative;
+ 
+    margin-left: 100px;
+    margin-bottom: 30px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.list-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #B9B9B9;
+
+    position: absolute;
+    top: 0;
+    left: 60px;
+
+    width: 530px;
+
+    list-style: none;
+}
+
+.dia-semana {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    position: relative;
+    top: 20px;
+    left: 0;
+
+    width: 250px;
+    height: 150px;
+
+    box-shadow: 1px 0 #B9B9B9; 
+
+    gap: 10px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+    width: 250px;
+    height: 150px;
+    box-shadow: 1px 0 #B9B9B9;
+
+    gap: 10px;
+}
+
+.container-chip{
+    max-width: 100px;
+    height: 25px;
+    
+    opacity: 90%;
+
+    position: relative;
+    
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 150px;
+
+    position: relative;
+    bottom: 20px;
+    right: 30px;
+
+    gap: 30px;
+}
+
+.valor * {
+    height: 22px;
+    width: 65px;
+    border-radius: 2px;
+}
+
+.color {
+   background-color: #7B61FF;
+}
+
+.icon-filter{
+    width: 9px;
+
+    position: relative;
+    right: 10%;
+    top: 5%;
+}
+
+.div-btn-apply-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 70px;
+    right: 0;
+
+    width: 250px;
+    height: 50px;
+
+    gap: 15px;
+}
+
+.div-btn-apply-clear * {
+    height: 30px;
+    width: 108px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn-clear-filters {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.btn-apply-filters {
+    background: linear-gradient(264.83deg, #3A9FF1 -3.28%, #05EDE3 100%);
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.input {
+    all: unset;
+
+    width: 65px;
+    height: 22px;
+
+    box-sizing: border-box;
+    background: #FFFFFF;
+
+    border: 1px solid #7B61FF;
+    border-radius: 2px;
+}

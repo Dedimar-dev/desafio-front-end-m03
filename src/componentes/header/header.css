@@ -1,0 +1,36 @@
+.container-header {
+    background: linear-gradient(90.23deg, #05EDE3 0.02%, #645FFB 99.63%);
+    color: #fff;
+
+    width: 94.5%;
+    height: 180px;
+    padding-left: 80px;
+
+    position: absolute;
+    top: 0;
+}
+
+.container-header-div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.logo2 {
+    width: 30px;
+    position:fixed;
+    left: 105px;
+}
+
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}

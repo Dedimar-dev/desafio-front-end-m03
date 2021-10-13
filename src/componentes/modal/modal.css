@@ -1,0 +1,135 @@
+.backdrop{
+
+    font-family: 'Rubik', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    
+    background-color: rgba(61, 61, 61, 0.48);
+
+    min-height: 100vh;
+}
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    position: fixed;
+    width: 400px;
+    height: 600px;
+
+    top: 10px;
+    left: 35%;
+    
+    padding: 40px 50px;
+
+    border-radius: 20px;
+
+    background-color: #fff;
+
+    gap: 30px;
+}
+
+h1{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.div-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.color{
+    color: black;
+}
+
+.close-icon{
+    position:absolute;
+    top: 55px;
+    right: 30px;
+}
+
+
+button {
+    all: initial;
+    box-sizing: border-box;
+    text-align: center;
+    width: 200px;
+    height: 45px;
+}
+
+.div-inputs > input {
+    all: unset;
+
+    box-sizing: border-box;
+
+    width: 385px;
+    height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 16px;
+
+    background: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+
+    text-transform: capitalize;
+}
+
+
+.entrada-button{
+    background: linear-gradient(91.26deg, #05EDE3 0%, #3A9FF1 97.77%);
+    border-radius:10px 0 0 10px;
+}
+
+.saida-button{
+    background: linear-gradient(91.66deg, #FA8C10 0%, #FF576B 90.32%);
+    border-radius:0 10px 10px 0;
+}
+
+.confirmar-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 30px;
+}
+
+.btn-insert{
+    background-color: #645FFB;
+
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.color-silver {
+    background: #B9B9B9;
+}
