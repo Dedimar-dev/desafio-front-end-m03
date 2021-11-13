@@ -18,12 +18,12 @@
     box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 
-    width: 1000px;
+    width: 950px;
     height: 58px;
 
-    padding-left: 30px;
+    padding-left: 20px;
 
-    gap: 120px;
+    gap: 105px;
 }
 
 .column-title {
@@ -49,25 +49,20 @@
     align-items: center;
     justify-content:space-between;
     
-    width: 1000px;
+    width: 965px;
     height: 10px;
 
-    padding-left: 30px;
+    padding-left: 10px;
 
     box-shadow: 0 2px #EAEAEA;
 
-    gap: 98px;
+    gap: 95px;
 }
 
 .line-items {
-   width: 110px;
+   width: 150px;
    margin-bottom: 40px;
 }
-
-.edit-icon{
-    /* margin-bottom: 20px; */
-}
-
 
 .delete-icon{
     margin-left: 30px;
@@ -100,7 +95,7 @@
 
 .div-confirm-delete {
     position: absolute;
-    right: 0;
+    right: 55px;
 }
 
 .seta {
@@ -129,8 +124,6 @@
 
     border-radius: 5px;
 }
-
-
 
 .sim {
     background-color: #3A9FF1;

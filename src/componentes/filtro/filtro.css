@@ -67,7 +67,7 @@
 }
 
 .container-chip{
-    max-width: 100px;
+    width: 100px;
     height: 25px;
     
     opacity: 90%;
@@ -77,6 +77,8 @@
     background: #FAFAFA;
     box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+
+
 }
 
 .valor {
@@ -109,7 +111,7 @@
     width: 9px;
 
     position: relative;
-    right: 10%;
+    right: 15px;
     top: 5%;
 }
 
