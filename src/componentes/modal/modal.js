@@ -3,18 +3,18 @@ import './modal.css';
 import close from './assets/+.svg';
 import InputMask from 'react-input-mask';
 
- function Modal({ formataTexto, diasDaSemana, carregar, setCarregar, informacoes, idEditar, setCondicaoModal1, setCondicaoModal2 }){
+function Modal({ formataTexto, diasDaSemana, carregar, setCarregar, informacoes, idEditar, setCondicaoModal1, setCondicaoModal2 }) {
 
     const [ativo, setAtivo] = useState(true);
     const [value, setValue] = useState();
     const [category, setCategory] = useState('');
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
-   
+
     useEffect(() => {
         editarDados();
         return
-    },[idEditar]);
+    }, [idEditar]);
 
     const editarDados = () => {
 
@@ -22,25 +22,25 @@ import InputMask from 'react-input-mask';
             let informacoesEditar = informacoes.filter(x => x.id === idEditar);
 
             informacoesEditar.map(x => {
-                if(x.type === 'debit'){
+                if (x.type === 'debit') {
                     setAtivo(true);
                 } else {
                     setAtivo(false);
                 }
 
                 const dias = x.date.slice(8, 10);
-                const mes = x.date.slice(5,7);
-                const ano = x.date.slice(0,4);
+                const mes = x.date.slice(5, 7);
+                const ano = x.date.slice(0, 4);
                 let novaData = `${dias}/${mes}/${ano}`;
 
                 setValue(x.value);
                 setCategory(x.category);
                 setDate(novaData);
-                setDescription( x.description);
+                setDescription(x.description);
             })
         }
     }
-   
+
     const handleCredit = () => {
         setAtivo(false);
     }
@@ -71,9 +71,9 @@ import InputMask from 'react-input-mask';
         verificaCamposInput();
 
         const ano = date.slice(6, 10);
-        const mes = date.slice(3,5);
-        const dias = date.slice(0,2);
-    
+        const mes = date.slice(3, 5);
+        const dias = date.slice(0, 2);
+
         let novaData = new Date(`${ano} ${mes} ${dias}`);
         let diaDasemana = diasDaSemana[novaData.getDay()]
         novaData = novaData.toISOString();
@@ -82,12 +82,12 @@ import InputMask from 'react-input-mask';
         const descricao = formataTexto(description);
 
         const data = {
-            date:novaData,
+            date: novaData,
             week_day: diaDasemana,
-            description: descricao ,
+            description: descricao,
             value: value,
             category: categoria,
-            type: ativo? 'debit':'credit'
+            type: ativo ? 'debit' : 'credit'
         }
 
         return data;
@@ -96,9 +96,9 @@ import InputMask from 'react-input-mask';
     const cadastrarInfo = async () => {
 
         try {
-           const dadosFinal = dados();
+            const dadosFinal = dados();
 
-           await fetch('http://localhost:3333/transactions',{
+            await fetch('http://localhost:3333/transactions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -107,24 +107,24 @@ import InputMask from 'react-input-mask';
             });
 
             limpaInput();
-            
+
         } catch (error) {
             console.log(error);
         }
-        
+
     }
 
     const editarInfo = async () => {
-        
-        try {
-           let dadosFinal = dados();
 
-           await fetch(`http://localhost:3333/transactions/${idEditar}`,{
+        try {
+            let dadosFinal = dados();
+
+            await fetch(`http://localhost:3333/transactions/${idEditar}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(dadosFinal ),
+                body: JSON.stringify(dadosFinal),
             });
 
             limpaInput();
@@ -137,31 +137,31 @@ import InputMask from 'react-input-mask';
 
     return (
         <div className="backdrop">
-           
-            <form onSubmit={ handleSubmit } className="modal-container">
 
-                 <h1>{ idEditar?'Editar Registro':'Adicionar Registro' }</h1>
+            <form onSubmit={handleSubmit} className="modal-container">
 
-                <img onClick={ () => {
-                        setCondicaoModal2(false) 
-                        setCondicaoModal1(false)
-                        } 
-                    } 
-                    className="close-icon" 
-                    src={ close } 
-                    alt="Close" 
+                <h1>{idEditar ? 'Editar Registro' : 'Adicionar Registro'}</h1>
+
+                <img onClick={() => {
+                    setCondicaoModal2(false)
+                    setCondicaoModal1(false)
+                }
+                }
+                    className="close-icon"
+                    src={close}
+                    alt="Close"
                 />
                 <nav>
 
-                    <button onClick={ handleCredit } 
+                    <button onClick={handleCredit}
                         id="credit-button"
-                        className={ `entrada-button ${ ativo? 'color-silver':'' }` }>
+                        className={`entrada-button ${ativo ? 'color-silver' : ''}`}>
                         Entrada
                     </button>
 
-                    <button onClick={ handleDebit } 
+                    <button onClick={handleDebit}
                         id="debit-button"
-                        className={ `saida-button ${ ativo? '':'color-silver' }` }>
+                        className={`saida-button ${ativo ? '' : 'color-silver'}`}>
                         Saída
                     </button>
 
@@ -170,11 +170,11 @@ import InputMask from 'react-input-mask';
 
                     <label htmlFor="valor">Valor</label>
                     <input
-                        onChange={ (e) => setValue(Number(e.target.value)) } 
-                        id="valor" 
-                        type="number" 
-                        name={ value } 
-                        value={ value }
+                        onChange={(e) => setValue(Number(e.target.value))}
+                        id="valor"
+                        type="number"
+                        name={value}
+                        value={value}
                         required
                     />
                 </div>
@@ -182,11 +182,11 @@ import InputMask from 'react-input-mask';
                 <div className="div-inputs">
                     <label htmlFor="categ">Categoria</label>
                     <input
-                        onChange={ (e) => setCategory(e.target.value) } 
-                        id="categ" 
-                        type="text" 
-                        name={ category } 
-                        value={ category }
+                        onChange={(e) => setCategory(e.target.value)}
+                        id="categ"
+                        type="text"
+                        name={category}
+                        value={category}
                         required
                     />
                 </div>
@@ -194,30 +194,30 @@ import InputMask from 'react-input-mask';
                 <div className="div-inputs">
                     <label htmlFor="data">Data</label>
                     <InputMask
-                        mask="99/99/9999" 
-                        onChange={ (e) => setDate(e.target.value) } 
-                        id="data" 
-                        type="text" 
-                        name={ date } 
-                        value={ date }
+                        mask="99/99/9999"
+                        onChange={(e) => setDate(e.target.value)}
+                        id="data"
+                        type="text"
+                        name={date}
+                        value={date}
                         required
                     />
                 </div>
-                
+
                 <div className="div-inputs">
                     <label htmlFor="descri">Descrição</label>
                     <input
-                        onChange={ (e) => setDescription(e.target.value) }  
-                        id="descri" 
-                        type="text" 
-                        name={ description } 
-                        value={ description }
+                        onChange={(e) => setDescription(e.target.value)}
+                        id="descri"
+                        type="text"
+                        name={description}
+                        value={description}
                     />
                 </div>
 
                 <div className="confirmar-div">
-                    <button 
-                        onClick={ idEditar? editarInfo : cadastrarInfo } 
+                    <button
+                        onClick={idEditar ? editarInfo : cadastrarInfo}
                         className="btn-insert">Confirmar</button>
                 </div>
             </form>
