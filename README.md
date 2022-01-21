@@ -8,9 +8,6 @@ Para acessar o repositório da API que será consumida no front, acesse o seguin
 
 Para o seu desenvolvimento foi liberado layout que você pode encontrar no seguinte [ link](https://www.figma.com/file/65wDh5PJwzSy7IYOS4AWAj).
 
-Para acessar o pdf contendo as informações de id e class, acesse o seguinte [link](https://drive.google.com/file/d/1J-ccfMnJrRFxc-vxsRtbN8SHRulwal7U/view?usp=sharing).
-
-
 O sistema trata-se de uma aplicação para controles de finanças pessoais, e as funcionalidades são: 
 
 #### Observação: Existem funcionalidades obrigatórias e opcionais!
@@ -28,8 +25,6 @@ O sistema trata-se de uma aplicação para controles de finanças pessoais, e as
 
 
 ## Dicas importantes
-Você receberá um *boilerplate* (um projeto com algumas configurações prontas).
-
 Para começar a trabalhar você precisará executar alguns comandos, mas isso é somente na **primeira vez**.
 
 1.  Realizar o fork do repositório
